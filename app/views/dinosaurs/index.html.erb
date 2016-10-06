@@ -1,17 +1,9 @@
-
-<div class="col-12 banner">
-  <!-- here come the banner-->
-  <%= image_tag("dinosaurs_era.jpg", :alt => "Dinosaur Era") %>
-  <h1> Discover the Dinosaurs era</h1>
-  <h2>Fun facts going in Time</h2>
-</div>
-
 <h1 class="page-title">Dinosaurs</h1>
+<a href="<%= new_dinosaur_path %>" class="new">New Dinosaur</a>
 <main class="col-10">
   <!-- here come the main -->
   <% @dinosaurs.each do |dinosaur| %>
   <article class="col-3 valley">
-    <!-- <img src="<%=dinosaur.image_url%>" alt="<%= dinosaur.name %>"/> -->
     <%= image_tag dinosaur.image_url %>
     <h1><%= dinosaur.name %></h1>
     <p class="col-12">
