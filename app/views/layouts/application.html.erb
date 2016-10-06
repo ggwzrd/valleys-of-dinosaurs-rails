@@ -6,9 +6,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="http://www.valleyofdinosaurs.bitballoon.com/favicon.png"/>
   </head>
 
   <body>
+    <header>
+      <!-- here come the header -->
+      <a href="<%= root_path %>" class="col-9"><h1>Valley of Dinos</h1></a>
+      <nav>
+        <ul class="col-2">
+          <a href="#"><li>About</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
