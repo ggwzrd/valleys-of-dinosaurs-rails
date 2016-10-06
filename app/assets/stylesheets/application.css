@@ -165,7 +165,7 @@
  .col-nav{width: 25%; left: -25%;}
 
 .page-title{
-  width: 200px;
+  width: 400px;
   text-align: center;
   display: block;
   margin: 25px auto;
@@ -176,13 +176,12 @@
   height: 50px;
   display: block;
   padding: 10px;
-  margin: 0 10px;
+  margin: 0 25px;
   right: 0;
   background: rgb(199, 25, 98);
   border-radius: 5px;
   text-align: center;
   line-height: 28px;
-  font-size: 12px;
   position: absolute;
 }
 
@@ -294,36 +293,45 @@
    margin: 0 auto;
    padding: 5px;
  }
- main article.dinos h1{
+ main article.dinos .description h1{
    font-size: 24px;
    color: rgb(28, 61, 78);
    margin: 0;
  }
- main article.dinos p{
+ main article.dinos .description p{
    font-size: 14px;
    color: rgb(28, 61, 78);
+   margin: 0;
    padding-bottom: 10px;
    border-bottom: 1px solid rgb(28, 61, 78);
  }
 
- main article.dinos .links{
+ main article.dinos .description .links{
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
    align-items: center;
  }
- main article.dinos ul{
+ main article.dinos .description .links ul{
    display: inline-block;
  }
- main article.dinos li{
+ main article.dinos .description .links ul li{
    display: inline-block;
    color: rgb(199, 25, 98);
    font-weight: bold;
  }
- main article.dinos a{
+ main article.dinos .description .links .options{
+   margin: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ main article.dinos .description .links .options a{
    padding: 10px;
    background: rgb(199, 25, 98);
    border-radius: 8px;
    float: right;
+   margin-left: 2px;
  }
 
  main.about .title{
@@ -395,6 +403,69 @@
 
  /* END MAIN ANIMATION */
 
+/*EDIT - NEW DINOSAUR PAGE*/
+main .form-data-dinosaur{
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main .form-data-dinosaur form{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+main .form-data-dinosaur form ul{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+main .form-data-dinosaur form ul li{
+  color: red;
+  display: block;
+}
+
+main .form-data-dinosaur form fieldset{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 10px auto;
+  border:0;
+  text-align: center;
+}
+main .form-data-dinosaur form fieldset input, select{
+  text-align: center;
+  margin: 10px auto;
+  border:1px solid #CCC;
+  color: rgb(115, 115, 115);
+  text-align: center;
+}
+main .form-data-dinosaur form fieldset input[type="submit"]{
+  display: block;
+  padding: 5px;
+  margin-bottom: 10px;
+  color: #FFF;
+  background: rgb(199, 25, 98);
+  border-radius: 8px;
+  transition: 0.2s;
+}
+main .form-data-dinosaur form fieldset input[type="submit"]:hover{
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+main .form-data-dinosaur form fieldset select{
+  width:200px;
+  padding: 2px;
+  display: block;
+}
+main .form-data-dinosaur form label{
+  margin-bottom: 10px;
+}
+/*END EDIT - NEW DINOSAUR PAGE*/
  /* END STYLE ARTICLE SPECIFIC */
 
  /* END MAIN CONTAINER */
@@ -414,6 +485,9 @@
      margin: 0 auto;
    }
    main.about .title{
+     width: 100%;
+   }
+   .page-title{
      width: 100%;
    }
  }

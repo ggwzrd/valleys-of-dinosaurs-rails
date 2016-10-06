@@ -1,0 +1,33 @@
+<div class="col-12 form-data-dinosaur">
+  <%= form_for @dinosaur do |f| %>
+
+     <ul>
+        <% @dinosaur.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+     </ul>
+
+     <fieldset class="input">
+       <%= f.label :name %>
+       <%= f.text_field :name %>
+     </fieldset>
+
+     <fieldset class="input">
+       <%= f.label :age %>
+       <%= f.number_field :age %>
+     </fieldset>
+
+     <fieldset class="input">
+       <%= f.label :image_url %>
+       <%= f.text_field :image_url %>
+      </fieldset>
+
+      <fieldset class="input">
+        <%= f.label :valley_id %>
+<%= f.collection_select(:valley_id, Valley.all, :id, :name) %>
+      </fieldset>
+      <fieldset class="input">
+        <%= f.submit (@dinosaur.new_record? ? "Create" : "Update") %>
+      </fieldset>
+   <% end %>
+</div>
